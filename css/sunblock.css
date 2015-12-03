@@ -3,10 +3,31 @@
   height:50px;
 }
 
+.mainheading{
+  font-size:60px;
+  margin-top: 50px;
+  color:white;
+}
+.subheading{
+  margin-bottom:40px;
+}
+
+
+
 @media only screen and (max-width : 600px) {
 
 .theLogo{
   height:42px;
+}
+.mainheading{
+  font-size:35px;
+  margin-top:80px;
+  color:white;
+}
+
+.subheading{
+  font-size:17px;
+  margin-bottom:30px;
 }
 
 } // end media 600
