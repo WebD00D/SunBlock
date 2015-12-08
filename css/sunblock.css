@@ -1,4 +1,26 @@
 
+
+/* label color */
+ .input-field label {
+   color: #ef6c00 ;
+ }
+
+ .input-field input[type=text]{
+    color:black;
+ }
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+   color: #ef6c00 ;
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+   color:black;
+ }
+
+
+
 .theLogo{
   height:50px;
 }
