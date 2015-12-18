@@ -92,7 +92,21 @@
 
 }
 
+.partnerlogomain{
+  height:50px;
+}
+.partnerlogomain2{
+  height:30px;
+}
+
 @media only screen and (max-width : 600px) {
+
+  .partnerlogomain{
+    height:30px;
+  }
+  .partnerlogomain2{
+    height:20px;
+  }
 
 #belowtheVid{
   margin-top: 10px;
