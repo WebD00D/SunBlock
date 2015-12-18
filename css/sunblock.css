@@ -1,3 +1,10 @@
+#iframeVideo{
+  width:400px;
+  height:200px;
+}
+#paddingonTop{
+  margin-top:0px;
+}
 
 
 /* label color */
@@ -100,6 +107,16 @@
 }
 
 @media only screen and (max-width : 600px) {
+
+  #paddingonTop{
+    margin-top:15px;
+  }
+
+
+  #iframeVideo{
+    width:100%;
+    height:150px;
+  }
 
   .partnerlogomain{
     height:30px;
