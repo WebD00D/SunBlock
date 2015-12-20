@@ -2,6 +2,18 @@
   width:400px;
   height:200px;
 }
+
+.container{
+  width:70%;
+}
+
+#theframe{
+
+  width:280px;
+  height:300px;
+
+}
+
 #paddingonTop{
   margin-top:0px;
 }
@@ -55,15 +67,30 @@
 
 
 
-@media only screen and (max-width:720px){
+@media only screen and (max-width:700px){
   #belowtheVid{
     margin-top: 10px;
   }
+
 
 }
 @media only screen and (max-width:900px){
   #belowtheVid{
     margin-top: 10px;
+  }
+  #theframe{
+    width:180px;
+    height:200px;
+  }
+
+}
+@media only screen and (max-width:970px){
+  #belowtheVid{
+    margin-top: 10px;
+  }
+  #theframe{
+    width:180px;
+    height:200px;
   }
 
 }
@@ -79,6 +106,10 @@
   .autotext{
     font-size: 12px;
   }
+  #theframe{
+    width:250px;
+    height:280px;
+  }
 }
 @media only screen and (max-width:1100px){
   #belowtheVid{
@@ -87,13 +118,27 @@
   .autotitles{
     font-size: 18px;
   }
+  #theframe{
+    width:230px;
+    height:250px;
+  }
 
+}
+
+@media only screen and (min-width:1920px){
+  .container{
+    width:70%;
+  }
 }
 
 
 @media only screen and (max-width:1000px){
   #belowtheVid{
     margin-top: 10px;
+  }
+  #theframe{
+    width:200px;
+    height:210px;
   }
 
 
