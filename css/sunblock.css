@@ -3,7 +3,10 @@
   height:200px;
 }
 
-
+.containerMain{
+  margin-left:5%;
+  margin-right:5%;
+}
 
 #theframe{
 
