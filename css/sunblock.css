@@ -4,8 +4,8 @@
 }
 
 .containerMain{
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:10%;
+  margin-right:10%;
 }
 
 #theframe{
@@ -154,6 +154,11 @@
 }
 
 @media only screen and (max-width : 600px) {
+
+  .containerMain{
+    margin-left:2%;
+    margin-right:2%;
+  }
 
   #paddingonTop{
     margin-top:15px;
