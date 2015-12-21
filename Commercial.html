@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
   <link rel="stylesheet" type="text/css" href="css/sunblock.css">
   </head>
   <body>
@@ -282,6 +283,14 @@
     <div class="parallax"><img src="http://files.parsetfss.com/69cc1ebe-f693-4f84-ae97-93438bf7ac31/tfss-523309b4-de27-4216-884b-4f12db48f622-Sunblock1.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
+  
+
+  <div class="row" style="margin-bottom:0px">
+  <div id="instafeed" class="col s12 instafeedme" style="padding:0px"></div>
+  </div>
+
+
+
 
   <div class="section" style="background-color:white">
      <div class="row" style='padding-top:5px'>
@@ -317,6 +326,8 @@
        </div>
      </div>
    </div>
+
+
 
 
 
@@ -359,5 +370,44 @@
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
   <script src="js/sunblock.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+   <script src="js/instafeed.js" type='text/javascript'></script>
+ <script>
+
+   $(document).ready(function(){
+
+     $("#instafeed").delegate(".instaimg","click",function(){
+       var link = $(this).attr("data-ref");
+       window.location.href = link;
+     })
+     $("#instafeed").delegate(".instaimg","mouseover",function(){
+       $(this).css("cursor","pointer");
+     })
+
+     var feed = new Instafeed({
+     get: 'tagged',
+     tagName: 'sunblockcom',
+     userId: '2347535010',
+     resolution: 'standard_resolution',
+     accessToken: '2347535010.1677ed0.e5fff382f1b44cf8b7e2168bed49ee81',
+     template: '<div data-ref="{{link}}" class="col s3 instaimg" style="padding:0px"><img class="responsive-img" src="{{image}}" ></div>',
+     after:function(){
+
+       $('.instafeedme').slick({
+          slidesToShow: 4,
+          arrows:false,
+          autoplay:true
+       });
+     }
+     });
+     feed.run();
+
+
+
+
+
+   })
+
+ </script>
   </body>
 </html>
