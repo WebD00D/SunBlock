@@ -57,6 +57,9 @@
     <div class="parallax"><img height="1080px" src="http://www.whitehorsetints.co.uk/wp-content/uploads/2013/06/DSCN2720.jpg"></div>
   </div>
 
+  <div class="row" style="margin-bottom:0px">
+  <div id="instafeed" class="col s12 instafeedme" style="padding:0px"></div>
+  </div>
 
 
 
@@ -275,7 +278,7 @@
 
 
 
-  <!-- <div class="parallax-container valign-wrapper" style="height:300px;background-color:rgba(01,01,01,0.5)">
+   <div class="parallax-container valign-wrapper" style="height:300px;background-color:rgba(01,01,01,0.5)">
       <div class="container">
         <div class="row center">
           <h4 class="white-text parralaxheader" style="font-weight:200"><b>Free Consultations and Estimates</b></h4>
@@ -286,13 +289,11 @@
         </div>
       </div>
     <div class="parallax"><img src="http://files.parsetfss.com/69cc1ebe-f693-4f84-ae97-93438bf7ac31/tfss-523309b4-de27-4216-884b-4f12db48f622-Sunblock1.jpg" alt="Unsplashed background img 2"></div>
-  </div> -->
-
-
-
-  <div class="row" style="margin-bottom:0px">
-  <div id="instafeed" class="col s12 instafeedme" style="padding:0px"></div>
   </div>
+
+
+
+
 
 
 
@@ -401,9 +402,34 @@
      after:function(){
 
        $('.instafeedme').slick({
-          slidesToShow: 4,
+          slidesToShow: 12,
           arrows:false,
-          autoplay:true
+          autoplay:true,
+          responsive: [
+   {
+     breakpoint: 1024,
+     settings: {
+       slidesToShow: 6
+
+
+     }
+   },
+   {
+     breakpoint: 600,
+     settings: {
+       slidesToShow: 6
+
+     }
+   },
+   {
+     breakpoint: 480,
+     settings: {
+       slidesToShow: 6
+
+     }
+   }
+
+ ]
        });
      }
      });
