@@ -335,13 +335,6 @@
 
 
 
-
-
-
-
-
-
-
   <footer class="page-footer" style='background-color:#2D2D2D;padding-top:0px;margin-top:0px'>
     <div style="padding:10px;" class="orange darken-3">
       <div class="container right-align">
@@ -402,9 +395,11 @@
      after:function(){
 
        $('.instafeedme').slick({
-          slidesToShow: 12,
-          arrows:false,
-          autoplay:true,
+         slidesToShow: 12,
+         arrows:false,
+         swipeToSlide: true,
+         autoplay:true,
+         infinite:true,
           responsive: [
    {
      breakpoint: 1024,
