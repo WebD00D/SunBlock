@@ -132,11 +132,17 @@
               <div class="input-field col s6" >
                 <input placeholder="What's 3 + 4?" id="txtCaptcha" type="text" class="validate">
                 <label for="txtCaptcha">CAPTCHA</label>
+                <Br>
+
               </div>
               <div class="col s6">
-                <a  href="#" class="btn-large waves-effect waves-light right orange darken-3 headerbtn">Submit</a>
+                <a id="btnSubmit" href="#" class="btn-large waves-effect waves-light right orange darken-3 headerbtn">Submit</a>
               </div>
+              <br>
 
+            </div>
+            <div class="col s12">
+                <label id="lblError" class="red-text left-align">Invalid Captcha response!</label>
             </div>
 
           </div>
@@ -231,5 +237,42 @@
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
   <script src="js/sunblock.js"></script>
+  <script>
+
+  $(document).ready(function(){
+    $("#lblError").hide();
+
+    $("#btnSubmit").click(function(e){
+      $("#lblError").hide();
+      e.preventDefault();
+      var firstName = $("#txtFirstName").val();
+      var lastName = $("#txtLastName").val();
+      var phone = $("#txtPhone").val();
+      var email = $("#txtEmail").val();
+      var message = $("#txtMessage").val();
+      var captcha = $("#txtCaptcha").val();
+
+      if (captcha != 7){
+        $("#lblError").show();
+        return;
+      } else {
+
+        //good to send the form
+
+
+      }
+
+
+
+
+
+    })
+
+  })
+
+
+
+
+  </script>
   </body>
 </html>
